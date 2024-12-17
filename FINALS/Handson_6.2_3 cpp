@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int celsius(int f) {
+  return (f - 32) * 5 / 9;
+}
+int fahrenheit(int c) {
+  return (c * 9 / 5) + 32;
+}
+
+int main () {
+  cout << "CELSIUS TO FAHRENHEIT \t | FAHRENHEIT TO CELSIUS" << endl;
+  cout << "Celsius\tFahrenheit\t|\tFahrenheit\tCelsius" << endl;
+
+  for (int c = 0, f = 32; c <= 100 || f <= 212; ++c, ++f) {
+
+      if (c <= 100)
+        cout << c << "\t\t" << fahrenheit(c) << "\t\t";
+      else 
+        cout << "\t\t\t\t";
+
+        if (f <= 212)
+        cout << f << "\t\t" << celsius(f);
+        cout << endl;
+    }
+      return 0;
+  }
