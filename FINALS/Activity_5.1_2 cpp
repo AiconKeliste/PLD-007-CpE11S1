@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int multiple(int number, int x) {
+  if (number % x == 0)
+    return 1;
+  else 
+    return 0;
+}
+
+int main () {
+  int number, x;
+  printf("Enter a number: ");
+  scanf("%d", & number);
+  printf("Enter the multiple to check (x): ");
+  scanf("%d", &x);
+
+  if (multiple(number, x))
+    printf("%d is a multiple of %d. \n", number, x);
+  else 
+    printf("%d is not a multiple of %d.\n", number, x);
+
+    return 0;
+}
