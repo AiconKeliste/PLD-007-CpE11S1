@@ -1,0 +1,13 @@
+#include <iostream>
+
+double cubeArea(double s) {
+  return s * s * s;
+}
+
+int main () {
+  double side;
+  std::cout << "Enter cube side length: ";
+  std::cin >> side;
+  std::cout << "Cube area: " << cubeArea(side) << std::endl;
+  return 0;
+}
