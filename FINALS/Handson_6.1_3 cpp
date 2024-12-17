@@ -1,0 +1,33 @@
+#include <iostream>
+
+double dollarsToPesos(double dollars) {
+  const double exchangeRate = 59.0;
+  return dollars * exchangeRate;
+}
+double pesosToDollars(double pesos) {
+  const double exchangeRate = 59.0;
+  return pesos / exchangeRate;
+}
+
+int main() {
+  int choice;
+  double amount;
+
+  std::cout << "Currency Converter" << std::endl;
+  std::cout << "1. Dollars to Pesos" << std::endl;
+  std::cout << "2. Pesos to Dollars" << std::endl;
+  std::cout << "Enter your choice: ";
+  std::cin >> choice;
+
+  std::cout << "Enter amount: ";
+  std::cin >> amount;
+
+  if (choice == 1) {
+    std::cout << "$" << amount << " = " << dollarsToPesos(amount) << " PESOS" << std::endl;
+  } else if (choice ==2) {
+    std::cout << amount << " PESOS = $" << pesosToDollars(amount) << std::endl;
+  } else {
+    std::cout << "Invalide choice!" << std::endl;
+  }
+   return 0;
+  }
